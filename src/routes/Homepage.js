@@ -46,10 +46,15 @@ class Homepage extends Component {
                 <div class="row h-100">
                   <div class="col-lg-7 my-auto">
                     <div class="header-content mx-auto">
-                      <h1 class="mb-5">This app is about title text here and the description</h1>
+                      <h1 class="mb-5">Share Your Pain</h1>
+                      <p>designed to provide you with a safe space to overcome emotional pain by sharing your feelings, unfiltered and without fear of judgement or shaming.</p>
                         <Link to='/share' class="nav-link js-scroll-trigger">
-                            <div class="btn btn-light btn-xl col-12 col-md-6 mx-auto" style={styles.tryButton}><span class='lightText'>Try It Now</span></div>
+                            <div class="btn btn-xl col-12 col-md-6" style={styles.tryButton} id='tryButton'><span class='lightText'>Try It Now</span></div>
                         </Link>
+                        <div class="badges" style={{marginTop:30}}>
+                          <a class="badge-link" href="#" onClick={() => alert('This app is currently being submitted, please check back soon!')}><img src={require("../assets/img/google-play-badge.svg")} alt=""/></a>
+                          <a class="badge-link" href="#" onClick={() => alert('This app is currently being submitted, please check back soon!')}><img src={require("../assets/img/app-store-badge.svg")} alt=""/></a>
+                        </div>
                       
                     </div>
                   </div>
@@ -75,14 +80,14 @@ class Homepage extends Component {
                   </div>
                 </div>
               </div>
-            </section>
+            </section> */}
 
-            <section class="features" id="features">
+            {/* <section class="features" id="features">
               <div class="container">
                 <div class="section-heading text-center">
                   <h2>Unlimited Features, Unlimited Fun</h2>
                   <p class="text-muted">Check out what you can do with this app theme!</p>
-                  <hr>
+                  <hr/>
                 </div>
                 <div class="row">
                   <div class="col-lg-4 my-auto">
@@ -90,7 +95,7 @@ class Homepage extends Component {
                       <div class="device-mockup iphone6_plus portrait white">
                         <div class="device">
                           <div class="screen">
-                            <img src="img/demo-screen-1.jpg" class="img-fluid" alt="">
+                            <img src="img/demo-screen-1.jpg" class="img-fluid" alt="" />
                           </div>
                           <div class="button">
                           </div>
@@ -126,7 +131,7 @@ class Homepage extends Component {
                         </div>
                         <div class="col-lg-6">
                           <div class="feature-item">
-                            <i class="icon-lock-open text-primary"></i>
+                            <i class="icon-lock text-primary"></i>
                             <h3>Open Source</h3>
                             <p class="text-muted">Since this theme is MIT licensed, you can use it commercially!</p>
                           </div>
@@ -141,14 +146,14 @@ class Homepage extends Component {
             <section class="cta">
               <div class="cta-content">
                 <div class="container">
-                  <h2>Stop waiting.<br>Start building.</h2>
-                  <a href="#contact" class="btn btn-outline btn-xl js-scroll-trigger">Let's Get Started!</a>
+                  <h2>Stop waiting.<br/>Start building.</h2>
+                  <a href="/share" class="btn btn-outline btn-xl js-scroll-trigger">Let's Get Started!</a>
                 </div>
               </div>
               <div class="overlay"></div>
-            </section>
+            </section> */}
 
-            <section class="contact bg-primary" id="contact">
+            {/*<section class="contact bg-primary" id="contact">
               <div class="container">
                 <h2>We
                   <i class="fa fa-heart"></i>
@@ -204,7 +209,7 @@ const styles = {
         maxWidth: '100%',
     },
     tryButton: {
-        backgroundColor: 'transparent',
+        // backgroundColor: 'transparent',
         borderWidth: 1,
         borderColor: "#f7f7f7",
         height:40,

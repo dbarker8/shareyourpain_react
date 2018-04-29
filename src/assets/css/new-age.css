@@ -59,7 +59,7 @@ section h2 {
 
 #mainNav {
   border-color: rgba(34, 34, 34, 0.05);
-  background-color: white;
+  background-color: rgba(100,100,100, .9);
   -webkit-transition: all .35s;
   -moz-transition: all .35s;
   transition: all .35s;
@@ -80,7 +80,7 @@ section h2 {
 #mainNav .navbar-toggler {
   font-size: 12px;
   padding: 8px 10px;
-  color: #222222;
+  color: #f5f5f5;
 }
 
 #mainNav .navbar-nav > li > a {
@@ -100,7 +100,7 @@ section h2 {
 
 #mainNav .navbar-nav > li > a,
 #mainNav .navbar-nav > li > a:focus {
-  color: #222222;
+  color: #f5f5f5;
 }
 
 #mainNav .navbar-nav > li > a:hover,
@@ -161,6 +161,7 @@ header.masthead {
   background: url("../img/bg-pattern3.png"), linear-gradient(to left, #686868, #1a1a1a);
 } */
 
+
 header.masthead .header-content {
   max-width: 500px;
   margin-bottom: 100px;
@@ -207,21 +208,22 @@ section.download h2 {
   margin-top: 0;
 }
 
-section.download .badges .badge-link {
+.badges .badge-link {
   display: block;
   margin-bottom: 25px;
+  margin-left: 10px;
 }
 
-section.download .badges .badge-link:last-child {
+.badges .badge-link:last-child {
   margin-bottom: 0;
 }
 
-section.download .badges .badge-link img {
+.badges .badge-link img {
   height: 60px;
 }
 
 @media (min-width: 768px) {
-  section.download .badges .badge-link {
+  .badges .badge-link {
     display: inline-block;
     margin-bottom: 0;
   }

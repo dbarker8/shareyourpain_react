@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Story from '../components/Story';
 import MyNavbar from '../components/MyNavbar';
 
+import heart from '../assets/img/heart.png';
+import broken_heart from '../assets/img/broken_heart.png';
 
 const testStories = [
     { body: 'asd ad asd asdhjkas kjdha fjkasdhf auisdfhu hudsafui asiudfhuiasdufi asudihf asiudfgaguisdfuigasd' },
@@ -22,7 +24,7 @@ class ViewStoriesPage extends Component {
     }
 
 componentWillMount(){
-    fetch('https://shareyourpain.herokuapp.com/getstories', {
+    fetch('/getstories', {
       method: 'GET',
       credentials: 'same-origin',
       headers: {
@@ -48,14 +50,18 @@ componentWillMount(){
             <div class='chalkboard'>
                 <MyNavbar />
                 <div class='container' style={styles.container}>
-                    {/* <h1 class='lightText'>ViewStoriesPage</h1> */}
-                    {this.state.stories.map((item, index) => {
-                        return(
-                            <Story
-                                item={item}
-                            />
-                        )
-                    })}
+                    <div class='row'>
+                        {/* <h1 class='lightText'>ViewStoriesPage</h1> */}
+                        {this.state.stories.map((item, index) => {
+                            return(
+                                <Story
+                                    item={item}
+                                    heart={heart}
+                                    brokenHeart={broken_heart}
+                                />
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
         );
