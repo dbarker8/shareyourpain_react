@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+* {
+  font-family: 'Nunito';
+}
+
+body {
+  margin: 0;
+	padding: 0;
+}
+
+#formcard {
+	/*margin:15px;*/
+	max-width:450px;
+	background-color: #f7f7f7;
+	padding:5px;
+	border-radius:5px;
+	box-shadow: 0px 0px 22px .1px #464646;
+/*	align-items: center;
+	align-content: center;*/
+}
+
+.lightText {
+	color: #f7f7f7;
+}
