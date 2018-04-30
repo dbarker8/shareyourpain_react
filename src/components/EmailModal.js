@@ -51,6 +51,9 @@ class EmailModal extends Component {
                                 <input class='form-control col-12' type='email' onChange={x => this.setState({ email: x.target.value })} placeholder='email...'/>
                                 <br/>
                                 <div class='btn btn-primary col-12' data-dismiss="modal" onClick={this.submitEmail.bind(this)}>Submit</div>
+                                {/* <Link to='/share'>
+                                <a>Try the web version<a>
+                                </Link> */}
                             </div>
                             {/* <div class="modal-footer">
                 <a class="btn btn-secondary" href={'mailto:'+this.props.class.professorEmail+'?Subject=Question'} >Email Professor</a>

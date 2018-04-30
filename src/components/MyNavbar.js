@@ -53,6 +53,9 @@ class MyNavbar extends Component {
                     <li class="nav-item">
                         <Link to='/stories' class="nav-link js-scroll-trigger">Wall</Link>
                     </li>
+                    <li class="nav-item">
+                                <Link to='/gethelp' class="nav-link js-scroll-trigger" style={{ color: '#4286f4', fontWeight: 'bold'}}>Get Help</Link>
+                    </li>
                   </ul>
                 </div>
               </div>

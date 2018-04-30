@@ -5,6 +5,7 @@ import DashboardPage from "./DashboardPage";
 import LoginPage from "./LoginPage";
 import SharePage from "./SharePage";
 import ViewStoriesPage from "./ViewStoriesPage";
+import HelpPage from "./HelpPage";
 
 export default () => (
     <BrowserRouter>
@@ -14,6 +15,7 @@ export default () => (
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/share" component={SharePage} />
             <Route exact path="/stories" component={ViewStoriesPage} />
+            <Route exact path="/gethelp" component={HelpPage} />
         </Switch>
     </BrowserRouter>
 );
