@@ -6,6 +6,7 @@ import LoginPage from "./LoginPage";
 import SharePage from "./SharePage";
 import ViewStoriesPage from "./ViewStoriesPage";
 import HelpPage from "./HelpPage";
+import PrivacyPolicy from "./PrivacyPolicy";
 
 export default () => (
     <BrowserRouter>
@@ -16,6 +17,7 @@ export default () => (
             <Route exact path="/share" component={SharePage} />
             <Route exact path="/stories" component={ViewStoriesPage} />
             <Route exact path="/gethelp" component={HelpPage} />
+            <Route exact path="/privacypolicy" component={PrivacyPolicy} />
         </Switch>
     </BrowserRouter>
 );
