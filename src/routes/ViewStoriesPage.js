@@ -1,25 +1,18 @@
 import React, { Component } from 'react';
 import Story from '../components/Story';
 import MyNavbar from '../components/MyNavbar';
+import { PulseLoader } from 'react-spinners';
 
 import heart from '../assets/img/heart.png';
 import broken_heart from '../assets/img/broken_heart.png';
 
-const testStories = [
-    { body: 'asd ad asd asdhjkas kjdha fjkasdhf auisdfhu hudsafui asiudfhuiasdufi asudihf asiudfgaguisdfuigasd' },
-    { body: 'asd ad asd asdhjkas kjdha fjkasdhf auisdfhu hudsafui asiudfhuiasdufi asudihf asiudfgaguisdfuigasd' },
-    { body: 'asd ad asd asdhjkas kjdha fjkasdhf auisdfhu hudsafui asiudfhuiasdufi asudihf asiudfgaguisdfuigasd' },
-    { body: 'asd ad asd asdhjkas kjdha fjkasdhf auisdfhu hudsafui asiudfhuiasdufi asudihf asiudfgaguisdfuigasd' },
-    { body: 'asd ad asd asdhjkas kjdha fjkasdhf auisdfhu hudsafui asiudfhuiasdufi asudihf asiudfgaguisdfuigasd' },
-    { body: 'asd ad asd asdhjkas kjdha fjkasdhf auisdfhu hudsafui asiudfhuiasdufi asudihf asiudfgaguisdfuigasd' },
-    {body: 'asd ad asd asdhjkas kjdha fjkasdhf auisdfhu hudsafui asiudfhuiasdufi asudihf asiudfgaguisdfuigasd'},
-]
 
 class ViewStoriesPage extends Component {
     constructor(props){
         super(props);
         this.state={
-            stories: testStories
+            stories: [],
+            loadingStories: true
         }
     }
 
@@ -33,6 +26,7 @@ componentWillMount(){
       },
     }).then(result => result.json())
     .then(result => {
+        this.setState({loadingStories: false});
         if(result){
             this.setState({stories: result.stories})
         }else{
@@ -46,12 +40,14 @@ componentWillMount(){
 }
 
     render() {
+        let spinner = this.state.loadingStories ? <PulseLoader style={styles.loader} color='#c7c7c7' /> : null;
+
         return (
             <div class='chalkboard'>
                 <MyNavbar />
                 <div class='container' style={styles.container}>
                     <div class='row'>
-                        {/* <h1 class='lightText'>ViewStoriesPage</h1> */}
+                    {spinner}
                         {this.state.stories.map((item, index) => {
                             return(
                                 <Story
@@ -73,5 +69,7 @@ export default ViewStoriesPage
 const styles = {
     container: {
         paddingTop: 70
+    },
+    loader: {
     }
 }
