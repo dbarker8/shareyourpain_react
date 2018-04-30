@@ -47,9 +47,9 @@ class Homepage extends Component {
                   <div class="col-lg-7 my-auto">
                     <div class="header-content mx-auto">
                       <h1 class="mb-5">Share Your Pain</h1>
-                      <p>designed to provide you with a safe space to overcome emotional pain by sharing your feelings, unfiltered and without fear of judgement or shaming.</p>
+                      <p>A safe space to overcome emotional pain. Share your unfiltered feelings or thoughts anonymously, without fear of judgement or shaming.</p>
                         <Link to='/share' class="nav-link js-scroll-trigger">
-                            <div class="btn btn-xl col-12 col-md-6" style={styles.tryButton} id='tryButton'><span class='lightText'>Try It Now</span></div>
+                            <div class="btn btn-xl col-12 col-md-6" style={styles.tryButton} id='tryButton'><span class='lightText'>Start Now</span></div>
                         </Link>
                         <div class="badges" style={{marginTop:30}}>
                           <a class="badge-link" href="#" onClick={() => alert('This app is currently being submitted, please check back soon!')}><img src={require("../assets/img/google-play-badge.svg")} alt=""/></a>
