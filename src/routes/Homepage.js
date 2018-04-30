@@ -7,6 +7,7 @@ import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detec
 
 //my components
 import MyNavbar from '../components/MyNavbar';
+import EmailModal from '../components/EmailModal';
 
 //assets
 
@@ -40,7 +41,7 @@ class Homepage extends Component {
         return (
             <div>
             <MyNavbar />
-
+            <EmailModal />
             <header class="masthead chalkboard">
               <div class="container h-100">
                 <div class="row h-100">
@@ -48,14 +49,16 @@ class Homepage extends Component {
                     <div class="header-content mx-auto">
                       <h1 class="mb-5">Share Your Pain</h1>
                       <p>A safe space to overcome emotional pain. Share your unfiltered feelings or thoughts anonymously, without fear of judgement or shaming.</p>
-                        <Link to='/share' class="nav-link js-scroll-trigger">
+                      <div class="col-12 col-md-6 btn btn-xl">
+                        <Link to='/share'>
                             <div class="btn btn-xl col-12 col-md-6" style={styles.tryButton} id='tryButton'><span class='lightText'>Start Now</span></div>
                         </Link>
+                      </div>
+                      <div class="btn btn-xl col-12 col-md-6" style={styles.tryButton} data-toggle="modal" data-target="#emailModal" ><span class='lightText'>Request Early Access</span></div>
                         <div class="badges" style={{marginTop:30}}>
-                          <a class="badge-link" href="#" onClick={() => alert('This app is currently being submitted, please check back soon!')}><img src={require("../assets/img/google-play-badge.svg")} alt=""/></a>
-                          <a class="badge-link" href="#" onClick={() => alert('This app is currently being submitted, please check back soon!')}><img src={require("../assets/img/app-store-badge.svg")} alt=""/></a>
+                        <a data-toggle="modal" data-target="#emailModal" class="badge-link" ><img src={require("../assets/img/google-play-badge.svg")} alt=""/></a>
+                        <a data-toggle="modal" data-target="#emailModal" class="badge-link" ><img src={require("../assets/img/app-store-badge.svg")} alt=""/></a>
                         </div>
-                      
                     </div>
                   </div>
                   <div class="col-lg-5 my-auto" style={{backgroundColor: 'transparent', justifyContent: 'center'}}>
@@ -213,7 +216,8 @@ const styles = {
         borderWidth: 1,
         borderColor: "#f7f7f7",
         height:40,
-        borderRadius: 20
+        borderRadius: 20,
+        width: '100%'
     }
 }
 
