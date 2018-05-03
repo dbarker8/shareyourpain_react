@@ -10,6 +10,8 @@ class MyNavbar extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            navbarClass: "navbar navbar-expand-lg navbar-light fixed-top",
+
 
         }
         // this.checkIfLoggedIn();
@@ -19,6 +21,23 @@ class MyNavbar extends Component {
         //dont delete this empty function
     }
 
+    componentDidMount(){
+      window.scrollTo(0, 0); 
+      window.addEventListener('scroll', (e) => {
+        if(e.pageY > 2 && this.state.navbarClass != "navbar navbar-expand-lg navbar-shrink navbar-light fixed-top" ){
+          this.setState({navbarClass:"navbar navbar-expand-lg navbar-shrink navbar-light fixed-top"});
+          // alert('more than 0')
+        }
+        if(e.pageY < 2){
+          // alert('0')
+            this.setState({navbarClass:"navbar navbar-expand-lg navbar-light fixed-top"});
+
+        }else{
+          this.setState({navbarClass:"navbar navbar-expand-lg navbar-shrink navbar-light fixed-top"}); 
+        }
+        // console.log(e)
+      });
+    }
 
     render() {
 
@@ -34,7 +53,7 @@ class MyNavbar extends Component {
 
         return (
 
-            <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" >
+            <nav class={this.state.navbarClass} id="mainNav" >
               <div class="container">
                 {/* <a class="navbar-brand js-scroll-trigger" href="#page-top">SYP</a> */}
                 <img class='brand-img' src={logo} style={{ height: 45, backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }} />
@@ -54,7 +73,7 @@ class MyNavbar extends Component {
                         <Link to='/stories' class="nav-link js-scroll-trigger">Wall</Link>
                     </li>
                     <li class="nav-item">
-                                <Link to='/gethelp' class="nav-link js-scroll-trigger" style={{ color: '#4286f4', fontWeight: 'bold'}}>Get Help</Link>
+                        <Link to='/gethelp' class="nav-link js-scroll-trigger">Get Help</Link>
                     </li>
                   </ul>
                 </div>

@@ -49,14 +49,14 @@ class Homepage extends Component {
                     <div class="header-content mx-auto">
                       <h1 class="mb-5">Share Your Pain</h1>
                       <p>A safe space to overcome emotional pain. Share your unfiltered feelings or thoughts anonymously, without fear of judgement or shaming.</p>
-                      <div class="col-12 col-md-6 btn btn-xl">
-                        <Link to='/share'>
+                      {/* <div class="col-12 col-md-6 btn btn-xl"> */}
+                        <Link to='/share'  style={{width: '100%'}}>
                             <div class="btn btn-xl col-12 col-md-6" style={styles.tryButton} id='tryButton'><span class='lightText'>Try Now!</span></div>
                         </Link>
-                      </div>
-                      <div class="btn btn-xl col-12 col-md-6" style={styles.tryButton} data-toggle="modal" data-target="#emailModal" ><span class='lightText'>Request Early App Access</span></div>
-                        <div class="badges" style={{marginTop:30}}>
-                        <a data-toggle="modal" data-target="#emailModal" class="badge-link" ><img src={require("../assets/img/google-play-badge.svg")} alt=""/></a>
+                      {/* </div> */}
+                      {/* <div class="btn btn-xl col-12 col-md-5" style={styles.tryButton} ><span class='lightText'>Request Early App Access</span></div> */}
+                      <div class="badges" style={{marginTop:30}}>
+                        <a class="badge-link" href='https://play.google.com/store/apps/details?id=com.startupbus.shareyourpain' ><img src={require("../assets/img/google-play-badge.svg")} alt=""/></a>
                         <a data-toggle="modal" data-target="#emailModal" class="badge-link" ><img src={require("../assets/img/app-store-badge.svg")} alt=""/></a>
                         </div>
                     </div>
@@ -217,7 +217,7 @@ const styles = {
         borderColor: "#f7f7f7",
         height:40,
         borderRadius: 20,
-        width: '100%'
+        margin:10
     }
 }
 

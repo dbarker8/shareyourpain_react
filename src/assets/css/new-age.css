@@ -128,8 +128,8 @@ section h2 {
     color: white;
   }
   #mainNav.navbar-shrink {
-    border-color: rgba(34, 34, 34, 0.1);
-    background-color: white;
+    /* border-color: rgba(34, 34, 34, 0.1); */
+    background-color: rgba(30,30,30,.7);
   }
   #mainNav.navbar-shrink .navbar-brand {
     color: #222222;
@@ -139,7 +139,7 @@ section h2 {
   }
   #mainNav.navbar-shrink .navbar-nav > li > a,
   #mainNav.navbar-shrink .navbar-nav > li > a:focus {
-    color: #222222;
+    color: #f7f7f7;
   }
   #mainNav.navbar-shrink .navbar-nav > li > a:hover,
   #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
@@ -188,7 +188,7 @@ header.masthead .device-container {
   }
   header.masthead .header-content {
     margin-bottom: 0;
-    text-align: left;
+    /* text-align: left; */
   }
   header.masthead .header-content h1 {
     font-size: 50px;
@@ -208,10 +208,11 @@ section.download h2 {
   margin-top: 0;
 }
 
+
 .badges .badge-link {
   display: block;
   margin-bottom: 25px;
-  margin-left: 10px;
+  /* width: 45%; */
 }
 
 .badges .badge-link:last-child {
@@ -226,6 +227,8 @@ section.download h2 {
   .badges .badge-link {
     display: inline-block;
     margin-bottom: 0;
+    margin-right: 10px;
+    margin-left:10px;
   }
 }
 
