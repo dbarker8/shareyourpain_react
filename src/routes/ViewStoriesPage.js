@@ -32,7 +32,10 @@ componentWillMount(){
     .then(result => {
         this.setState({loadingStories: false});
         if(result){
-            this.setState({stories: result.stories})
+            this.setState({
+                stories: result.stories,
+                fadeClass: 'fadeanim show'
+            })
         }else{
             alert("Error getting stories. Please check your internet connection or try again");
         }
@@ -44,7 +47,6 @@ componentWillMount(){
 }
 
 componentDidMount(){
-    setTimeout(() => this.setState({fadeClass: 'fadeanim show'}), 50);    
 }
 
     render() {
